@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — StaffSmart Analytics</title>
+  <meta name="description" content="Contact StaffSmart Analytics for a free staffing analysis. We do not accept PII." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-root">
+
+  <!-- NAV (Option 3: Minimal Glow Navbar) -->
+  <header class="site-header" role="banner" aria-label="Main">
+    <div class="container header-inner" role="navigation">
+      <div class="brand">
+        <img src="logo.png" alt="StaffSmart Analytics" class="brand-logo" />
+        <div class="brand-title">
+          <span class="brand-name">StaffSmart</span>
+          <span class="brand-tag">Analytics</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#why" class="nav-link">Why Us</a>
+        <a href="services.html" class="nav-link">Solutions</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="security.html" class="nav-link">Data Safety</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (toggled by script.js) -->
+    <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="index.html#why">Why Us</a>
+      <a href="services.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Data Safety</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="fade-up">
+
+    <!-- Page header -->
+    <section class="hero" style="padding-top:36px;padding-bottom:18px;">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">Start with a pilot</span>
+          <h1 class="hero-title">Contact us to request a free staffing analysis</h1>
+          <p class="hero-lead">Complete the secure form below and a member of our team will reach out to schedule a short scoping call and deliver next steps. <strong>Do not submit PII.</strong></p>
+          <div class="hero-ctas">
+            <a href="#form" class="btn btn-primary">Fill the form</a>
+            <a href="mailto:info@staffsmartanalytics.com" class="btn btn-outline">Email: info@staffsmartanalytics.com</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="card form-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <div>
+                <div class="small-muted">Secure contact</div>
+                <div class="card-title">Request a free analysis</div>
+              </div>
+              <div class="time-tag">Response within 48 hrs</div>
+            </div>
+
+            <!-- Contact form -->
+            <form id="leadForm" action="https://formspree.io/f/xvgeqdyv" method="POST" autocomplete="on" aria-label="Contact form">
+              <!-- Redirect to thank-you page after successful submit -->
+              <input type="hidden" name="_next" value="https://staffsmartanalytics.com/thank-you.html">
+              <input type="hidden" name="_subject" value="New inquiry — StaffSmart Analytics">
+
+              <!-- Honeypot (hidden) -->
+              <div style="display:none !important; visibility:hidden;">
+                <label>Leave this field empty</label>
+                <input name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <label for="company">Organization</label>
+              <input id="company" name="company" type="text" required placeholder="Your organization (e.g., Acme Logistics)" maxlength="100" />
+
+              <label for="contactname">Contact name</label>
+              <input id="contactname" name="contactname" type="text" required placeholder="Full name" maxlength="80" />
+
+              <label for="email">Business email</label>
+              <input id="email" name="email" type="email" required placeholder="you@company.com" maxlength="100" />
+
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" maxlength="30" />
+
+              <label for="message">Brief description (what you'd like analyzed)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Shift schedules, number of staff, reporting frequency..." maxlength="2000"></textarea>
+
+              <label style="display:flex;gap:10px;align-items:flex-start;margin-top:6px">
+                <input id="no_pii_confirm" name="no_pii_confirm" type="checkbox" required />
+                <span>I confirm I will <strong>not</strong> submit PII (names, SSNs, DOB, medical or protected data).</span>
+              </label>
+
+              <div class="form-actions" style="margin-top:12px">
+                <button type="submit" class="btn btn-primary">Submit inquiry</button>
+                <a class="btn btn-ghost" href="mailto:info@staffsmartanalytics.com">Email us</a>
+              </div>
+
+              <p class="muted small" style="margin-top:8px">Form submissions are transmitted securely via Formspree (HTTPS). We retain only business contact details needed to respond. For privacy policy, see <a href="privacy.html">Privacy</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional contact resources -->
+    <section class="panel" style="padding-top:24px;padding-bottom:40px;">
+      <div class="container">
+        <div class="intro">
+          <h2>Other ways to connect</h2>
+          <p class="muted">If you prefer, request a demo, ask for a sample report, or email us directly.</p>
+        </div>
+
+        <div class="cards-grid" style="margin-top:14px">
+          <article class="feature">
+            <h3>Request a demo</h3>
+            <p class="muted">We can schedule a short demo to walk through sample reports and expected impacts for organizations similar to yours.</p>
+            <p class="small muted">Use the message field to request a demo date/time preference.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Sample reports</h3>
+            <p class="muted">We can share anonymized examples of our one-page action plans and forecasting outputs upon request.</p>
+            <p class="small muted">Ask for a sample report when you submit the form.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Partnerships & integrations</h3>
+            <p class="muted">We integrate with common scheduling and payroll systems via CSV or API. If you have an integration need, mention it in the message field.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-compact">
+        <img src="logo.png" alt="StaffSmart Analytics logo" class="footer-logo" />
+        <div class="brand-meta">
+          <div class="brand-name">StaffSmart Analytics</div>
+          <div class="brand-sub muted">Workforce optimization & forecasting</div>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="links">
+          <a href="services.html">Solutions</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="security.html">Data Safety</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <div class="copyright muted">© <span id="yrContact"></span> StaffSmart Analytics</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
