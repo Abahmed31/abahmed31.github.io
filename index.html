@@ -3,68 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>StaffSmart Analytics — Workforce Optimization & Forecasting</title>
-  <meta name="description" content="StaffSmart Analytics: AI-assisted staffing analysis, forecasting (30/90/180 days), overtime optimization, burnout prevention, and custom dashboards across industries." />
-
-  <!-- Security & privacy (client-side) -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="DENY" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="robots" content="index,follow" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formspree.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self';">
-
-  <!-- Stylesheet (external file - coming next) -->
+  <title>Staff Smart Analytics — Workforce Optimization</title>
+  <meta name="description" content="Staff Smart Analytics: forecasting, overtime optimization, burnout prevention, and cost-efficiency modeling." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';">
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- favicon (inline SVG data url) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231C2340'/%3E%3Cpath d='M22 64 L40 44 L56 56 L78 30' fill='none' stroke='%238080FF' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-
-  <!-- main script (deferred) -->
   <script defer src="script.js"></script>
 </head>
-<body class="page-root">
+<body>
 
-  <!-- SITE WRAPPER -->
-  <div class="site">
-
-    <!-- HEADER -->
-    <header class="site-header" role="banner">
-      <div class="container header-inner">
-        <div class="brand">
-          <img src="logo.png" alt="StaffSmart Analytics logo" class="brand-logo" />
-          <div class="brand-title">
-            <span class="brand-name">StaffSmart</span>
-            <span class="brand-tag">Analytics</span>
-          </div>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Staff Smart Analytics logo" class="brand-logo" />
+        <div class="brand-title">
+          <div class="brand-name">StaffSmart</div>
+          <div class="brand-tag">Analytics</div>
         </div>
-
-        <nav class="primary-nav" role="navigation" aria-label="Main navigation">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="services.html" class="nav-link">Services</a>
-          <a href="pricing.html" class="nav-link">Pricing</a>
-          <a href="security.html" class="nav-link">Data Safety</a>
-          <a href="contact.html" class="nav-cta">Contact</a>
-        </nav>
-
-        <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span class="hamburger"></span>
-        </button>
       </div>
 
-      <!-- Mobile nav (hidden by default; toggled by script.js) -->
-      <div id="mobileNav" class="mobile-nav" aria-hidden="true">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="security.html">Data Safety</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </header>
+      <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">Why Us</a>
+        <a href="services.html" class="nav-link">Solutions</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="security.html" class="nav-link">Data Safety</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
 
-    <!-- HERO (dark) -->
-    <section id="home" class="hero">
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span class="hamburger"></span></button>
+    </div>
+
+    <div id="mobileNav" class="mobile-nav" aria-hidden="true" style="display:none">
+      <a href="index.html">Home</a>
+      <a href="about.html">Why Us</a>
+      <a href="services.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Data Safety</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-left">
+        <div>
           <span class="eyebrow">AI-assisted workforce intelligence</span>
           <h1 class="hero-title">Optimize staffing, reduce overtime, and protect your workforce — with trusted forecasting</h1>
           <p class="hero-lead">Forecast demand (30 / 90 / 180 days), detect overtime drivers, and receive prioritized, actionable recommendations that show estimated savings and implementation difficulty. Works across healthcare, retail, logistics, public safety, and more.</p>
@@ -74,17 +57,33 @@
             <a href="services.html" class="btn btn-outline">Explore services</a>
           </div>
 
-          <ul class="stats">
-            <li><strong>20–40%</strong><span>Typical OT reduction</span></li>
-            <li><strong>320+</strong><span>Employees analyzed (sample)</span></li>
-            <li><strong>12</strong><span>Industries served</span></li>
-            <li><strong>Secure</strong><span>No PII accepted</span></li>
-          </ul>
+          <!-- STATS (hidden for now) -->
+          <!--
+          <div class="metrics" style="margin-top:20px">
+            <div class="stats-card">
+              <h3>—</h3>
+              <p>Typical OT reduction</p>
+            </div>
+            <div class="stats-card">
+              <h3>0</h3>
+              <p>Employees analyzed (sample)</p>
+            </div>
+            <div class="stats-card">
+              <h3>0</h3>
+              <p>Industries served</p>
+            </div>
+            <div class="stats-card">
+              <h3>Secure</h3>
+              <p>No PII accepted</p>
+            </div>
+          </div>
+          -->
+
         </div>
 
-        <div class="hero-right">
-          <div class="card visual-card">
-            <div class="card-head">
+        <aside>
+          <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center">
               <div>
                 <div class="small-muted">Free staffing analysis</div>
                 <div class="card-title">One-page action plan</div>
@@ -92,90 +91,78 @@
               <div class="time-tag">30 min</div>
             </div>
 
-            <div class="chart-visual" aria-hidden="true">
-              <!-- simple procedural SVG line chart for style -->
-              <svg viewBox="0 0 320 160" class="svg-chart" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                  <linearGradient id="gradA" x1="0" x2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
-                </defs>
-                <rect width="320" height="160" rx="12" fill="#f6f8ff" />
-                <path d="M24 120 L68 80 L112 100 L156 70 L200 90 L256 50" fill="none" stroke="url(#gradA)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+            <div style="margin-top:12px">
+              <svg class="svg-chart" viewBox="0 0 320 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <rect width="320" height="160" rx="12" fill="#f6f8ff"/>
+                <path d="M24 120 L68 80 L112 100 L156 70 L200 90 L256 50" fill="none" stroke="#8B5CF6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
 
-            <ul class="card-list">
+            <ul class="card-list" style="margin-top:12px;color:#6b7280">
               <li>Prioritized fixes to implement quickly</li>
               <li>Estimated overtime savings & difficulty</li>
               <li>Assigned owner & next steps</li>
             </ul>
 
-            <div class="card-actions">
+            <div style="margin-top:12px;display:flex;gap:10px">
               <a href="contact.html" class="btn btn-primary">Request free analysis</a>
-              <a href="pricing.html" class="btn btn-ghost">See pricing</a>
+              <a href="pricing.html" class="btn btn-outline">See pricing</a>
             </div>
           </div>
-        </div>
+
+          <div class="card" style="margin-top:12px">
+            <strong>Testimonial</strong>
+            <p style="margin:8px 0;font-style:italic">"Practical recommendations that our scheduling team implemented immediately."</p>
+            <div class="small-muted">— HR Manager, Example Organization</div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- FEATURE SECTIONS (light area starts) -->
-    <section class="panel features">
+    <!-- SERVICES -->
+    <section id="services" class="panel">
       <div class="container">
-        <div class="intro">
-          <h2>Why StaffSmart</h2>
-          <p>We focus on operational fixes that preserve quality of care and work while lowering unnecessary labor spend. Recommendations are prioritized by impact, difficulty, and estimated ROI.</p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="feature card-lg">
-            <h3>Overtime Optimization</h3>
-            <p>Reveal the scheduling rules, shift patterns, and handoff failures that create overtime. We provide targeted fixes — schedule rules, staffing adjustments, and process changes — with estimated savings.</p>
-          </article>
-
-          <article class="feature card-lg">
-            <h3>Burnout Prevention</h3>
-            <p>Measure consecutive shifts, recovery windows, and workload imbalance. Receive risk heatmaps and scheduling alternatives to reduce fatigue and turnover risk.</p>
-          </article>
-
-          <article class="feature card-lg">
-            <h3>Forecasting (30 / 90 / 180 days)</h3>
-            <p>Tactical and strategic forecasts that help you reduce agency use, plan hiring, and align training windows with demand. All forecasts include confidence ranges and operational guidance.</p>
-          </article>
-        </div>
-
-        <div class="cta-block">
-          <p class="muted small">Interested in a sample result? Our standard engagement provides a pilot report with a one-page action plan and sample savings estimate.</p>
-          <a href="contact.html" class="btn btn-primary">Request pilot</a>
+        <h2>Services & Benefits</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+          <div class="card">
+            <h4>Overtime Analysis</h4>
+            <p class="muted">We identify where overtime is triggered and provide targeted fixes — shift swaps, staffing adjustments, and rule changes.</p>
+          </div>
+          <div class="card">
+            <h4>Burnout Risk Detection</h4>
+            <p class="muted">We analyze workload distribution, consecutive shift patterns, and recovery time to highlight high-risk staff groups.</p>
+          </div>
+          <div class="card">
+            <h4>Forecasting & Coverage Planning</h4>
+            <p class="muted">Short-term forecasting to reduce agency use while keeping coverage safe and compliant.</p>
+          </div>
+          <div class="card">
+            <h4>Clear, Prioritized Recommendations</h4>
+            <p class="muted">Each finding includes estimated savings, implementation difficulty, and expected impact.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="brand-compact">
-            <img src="logo.png" alt="StaffSmart Analytics logo" class="footer-logo" />
-            <div class="brand-meta">
-              <div class="brand-name">StaffSmart Analytics</div>
-              <div class="brand-sub muted">Workforce optimization & forecasting</div>
-            </div>
-          </div>
-        </div>
+  </main>
 
-        <div class="footer-right">
-          <div class="links">
-            <a href="services.html">Services</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="security.html">Data Safety</a>
-            <a href="privacy.html">Privacy</a>
-          </div>
-          <div class="copyright muted">© <span id="yrHome"></span> StaffSmart Analytics</div>
+  <footer>
+    <div class="footer-inner">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="logo.png" alt="Staff Smart Analytics logo" class="footer-logo" style="height:36px" />
+        <div>
+          <div style="font-weight:700;color:#e5dbff">StaffSmart Analytics</div>
+          <div class="muted">Workforce optimization & forecasting</div>
         </div>
       </div>
-    </footer>
 
-  </div><!-- .site -->
+      <div style="text-align:right;color:#cfd6e6">
+        <div><a href="privacy.html" style="color:inherit">Privacy</a> &nbsp; • &nbsp; <a href="security.html" style="color:inherit">Data Safety</a></div>
+        <div style="margin-top:8px">© <span id="yrHome"></span> StaffSmart Analytics</div>
+      </div>
+    </div>
+  </footer>
 
+  <script>document.getElementById('yrHome').textContent=new Date().getFullYear();</script>
 </body>
 </html>
