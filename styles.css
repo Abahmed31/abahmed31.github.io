@@ -1,126 +1,29 @@
-/* Reset */
+/* ---------------- GLOBAL RESET ---------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #f5f7fb;
-  color: #1a1a1a;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    line-height: 1.6;
+    padding-top: 80px; /* space for fixed navbar */
 }
 
-/* NAVBAR */
-.navbar {
-  width: 100%;
-  background: #0d0f1a;
-  padding: 12px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ---------------- NAVBAR ---------------- */
+nav {
+    width: 100%;
+    background-color: #111;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* NAVBAR LINK COLORS — CYAN + PURPLE OUTLINE */
-.nav-links {
-  color: #7dfcff !important;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-
-  padding: 6px 12px;
-  border: 2px solid #9d4bff;
-  border-radius: 8px;
-
-  transition: background 0.25s ease, color 0.25s ease;
-}
-
-.nav-links:hover {
-  background: rgba(157, 75, 255, 0.25);
-  color: #7dfcff !important;
-}
-
-/* CONTACT BUTTON */
-.contact-btn {
-  background: #9d4bff;
-  color: white !important;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.contact-btn:hover {
-  background: #7a33db;
-}
-
-/* SECTIONS */
-section {
-  padding: 60px 40px;
-}
-
-h1, h2 {
-  color: #0d0f1a;
-  font-weight: 700;
-}
-
-/* FORM */
-form {
-  max-width: 600px;
-  margin-top: 30px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #cccccc;
-  font-size: 15px;
-}
-
-textarea {
-  min-height: 120px;
-}
-
-/* CHECKBOX FIX */
-.checkbox-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: 14px;
-  max-width: 600px;
-}
-
-.checkbox-row input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-top: 2px;
-}
-
-.checkbox-row label {
-  font-size: 15px;
-  line-height: 1.4;
-  color: #1a1a1a;
-}
-
-/* MOBILE FIXES */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .navbar {
-    padding: 14px 20px;
-  }
-
-  .checkbox-row {
-    flex-direction: row;
-  }
-}
+nav ul {
+    list-style: none;
+   
