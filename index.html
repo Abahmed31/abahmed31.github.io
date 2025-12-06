@@ -1,233 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Staff Smart Analytics — Workforce optimization & staffing insights</title>
-  <meta name="description" content="Staff Smart Analytics: data-driven staffing optimization for any industry. Reduce overtime, prevent burnout, and improve scheduling predictability." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StaffSmart Analytics</title>
 
-  <!-- Basic security + privacy meta (browser-respected) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formspree.io; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
-  <meta name="referrer" content="no-referrer-when-downgrade">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="robots" content="index,follow">
+    <!-- Mobile-friendly, professional Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Styles: clean, responsive -->
-  <style>
-    :root{
-      --navy:#0b2545;
-      --teal:#0fa3a3;
-      --muted:#6b7280;
-      --bg:#f6f9fb;
-      --card:#ffffff;
-      --maxw:1080px;
-      --radius:12px;
-      --shadow:0 6px 18px rgba(11,37,69,0.08);
-      --accent:#0b2545;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:#0b2545;-webkit-font-smoothing:antialiased}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+    <!-- Security Headers for GitHub Pages (client-side only) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin">
 
-    /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{height:52px;width:auto;display:block}
-    nav{display:flex;gap:14px;align-items:center}
-    nav a{font-weight:600;color:var(--navy);font-size:15px}
-
-    /* Hero */
-    .hero{display:flex;flex-direction:column;gap:18px;padding:36px;border-radius:14px;background:linear-gradient(180deg,#23395d 0%,#12314b 100%);color:white;margin:14px 0}
-    .hero h1{margin:0;font-size:28px;line-height:1.06}
-    .hero p{margin:0;color:rgba(255,255,255,0.9)}
-
-    .cta-row{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
-    .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
-    .btn-primary{background:var(--teal);color:white}
-    .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.12);color:white}
-
-    /* Sections */
-    .section{padding:36px 0}
-    h2{color:var(--navy);font-size:24px;margin:0 0 12px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px}
-
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-
-    /* Contact form */
-    .contact-wrap{max-width:760px;margin:auto}
-    .contact-form input,.contact-form textarea, .contact-form select {
-      width:100%;padding:12px;border-radius:8px;border:1px solid #dfe7ee;font-size:15px;margin-top:8px;
-      background: #fff;
-    }
-    .contact-form label{font-weight:600;font-size:14px;color:var(--navy)}
-    .contact-form small{display:block;color:var(--muted);margin-top:6px}
-
-    /* Footer */
-    footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      nav{display:none} /* simple collapse: small screens will see nav below */
-      header{padding-bottom:8px}
-    }
-    @media (max-width:480px){
-      .hero{padding:24px}
-      .hero h1{font-size:22px}
-    }
-  </style>
+    <style>
+        /* Additional security-hardening */
+        img { max-width: 100%; height: auto; }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <!-- Header / Navigation -->
-    <header>
-      <div class="brand">
-        <!-- Use the same logo file you uploaded; replace filename if needed -->
-        <img src="A_logo_for_a_company_named_Smart_Staff_Analytics_i.png" alt="Staff Smart Analytics logo" />
-        <div style="font-weight:800">Staff Smart Analytics</div>
-      </div>
 
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#data-safety">Data Safety</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- HERO -->
-    <main>
-      <section id="home" class="hero" role="region" aria-label="Introduction">
-        <h1>Optimize staffing, reduce overtime, and protect your team — across any industry.</h1>
-        <p>Data-driven staffing analysis tailored for hospitals, retail, public safety, manufacturing, and more. Actionable recommendations, clear ROI estimates, and no PII required.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#contact">Find out more</a>
-          <a class="btn btn-ghost" href="#services">See services</a>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="section" aria-labelledby="about-heading">
-        <div class="card">
-          <h2 id="about-heading">About Staff Smart Analytics</h2>
-          <p>We provide AI-assisted workforce analysis and scheduling optimization that make staffing predictable and cost-effective. Our analyses identify overtime drivers, staffing gaps, and burnout risks — and produce prioritized, practical steps to address them.</p>
-          <p><strong>Industries we serve:</strong> healthcare, retail, logistics, public safety, education, hospitality, manufacturing, and corporate operations.</p>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section id="services" class="section" aria-labelledby="services-heading">
-        <h2 id="services-heading">Services</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>AI-Assisted Staffing Analysis</h3>
-            <p>Automated analysis of schedules to reveal hidden overtime drivers, shift imbalances, and high-risk patterns.</p>
-          </div>
-          <div class="card">
-            <h3>Forecasting & Coverage Planning</h3>
-            <p>Short- and long-term forecasting to reduce agency cost and ensure coverage without overstaffing.</p>
-          </div>
-          <div class="card">
-            <h3>Custom Dashboards & Reporting</h3>
-            <p>Interactive visuals and prioritized recommendations, delivered on your schedule (weekly / monthly / quarterly).</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- PRICING -->
-      <section id="pricing" class="section" aria-labelledby="pricing-heading">
-        <h2 id="pricing-heading">Pricing</h2>
-        <div class="card">
-          <p>Pricing depends on organization size, number of employees analyzed, and reporting frequency. We offer flexible plans — from single-report pilots to enterprise recurring engagements. Provide a few details below and we’ll send a tailored estimate.</p>
-        </div>
-      </section>
-
-      <!-- DATA SAFETY -->
-      <section id="data-safety" class="section" aria-labelledby="data-heading">
-        <h2 id="data-heading">Data Safety & Privacy</h2>
-        <div class="card">
-          <p><strong>We do NOT accept or process PII.</strong> You must anonymize any staff or roster data before sending. Our analysis uses aggregated staffing metrics and anonymized inputs only. We never request or store names, social security numbers, health records, or other personal identifiers.</p>
-          <p>We recommend removing or hashing any employee identifiers prior to upload. By using our service you confirm you will not provide personal data that is protected or regulated.</p>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact & Request a Quote</h2>
-
-        <div class="card contact-wrap">
-          <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/your-form-id">
-            <!-- IMPORTANT: replace the action URL above with your Formspree form URL (Formspree gives an endpoint like https://formspree.io/f/abcxyz) -->
-            <!-- Hidden Formspree field: redirect to thank-you page after submit -->
-            <input type="hidden" name="_next" value="https://staffsmartanalytics.com/thank-you.html">
-            <input type="hidden" name="_subject" value="New inquiry from staffsmartanalytics.com">
-            <label for="company">Organization name</label>
-            <input id="company" name="company" type="text" placeholder="Acme Corp / Station 14" required>
-
-            <label for="contactname">Contact name</label>
-            <input id="contactname" name="contactname" type="text" placeholder="Your full name" required>
-
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" placeholder="your@company.com" required>
-
-            <label for="phone">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555">
-
-            <label for="message">Brief description of your needs</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us what you'd like assessed (shift schedules, number of staff, frequency)"></textarea>
-
-            <label style="display:block;margin-top:6px">
-              <input type="checkbox" name="no_pii_confirm" required>
-              I confirm I will not send any PII (names, SSNs, health records). I understand analyses use anonymized staffing data only.
-            </label>
-
-            <small>By submitting this form you consent to receive follow-up from Staff Smart Analytics. We will not sell your information. For privacy concerns, email: info@staffsmartanalytics.com</small>
-
-            <div style="margin-top:14px">
-              <button type="submit" class="btn btn-primary">Submit inquiry</button>
-              <a class="btn" style="margin-left:8px;background:transparent;border:1px solid #dfe7ee;border-radius:8px;padding:10px 14px;color:var(--navy)" href="mailto:info@staffsmartanalytics.com">Email us</a>
+    <!-- HEADER -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="StaffSmart Analytics Logo" class="w-12 h-12">
+                <h1 class="text-2xl font-bold text-blue-700">StaffSmart Analytics</h1>
             </div>
 
-            <noscript>
-              <p style="color:#b33">JavaScript is disabled — the form will still post but you may not see immediate feedback. You will be redirected after submission.</p>
-            </noscript>
-          </form>
-
-          <p style="margin-top:12px;color:var(--muted)">Note: Pricing depends on size and frequency. We will provide a tailored estimate after a short consultation.</p>
+            <!-- NAVIGATION -->
+            <nav class="hidden md:flex gap-6 text-lg">
+                <a href="#services" class="hover:text-blue-600">Services</a>
+                <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+                <a href="#security" class="hover:text-blue-600">Security</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </nav>
         </div>
-      </section>
-    </main>
+    </header>
 
-    <!-- Footer -->
-    <footer>
-      <div style="max-width:var(--maxw);margin:0 auto;padding:8px">
-        <div style="margin-bottom:8px">© <span id="year"></span> Staff Smart Analytics</div>
-        <div style="font-size:13px;color:var(--muted)">Security measures applied: content security policy, referrer policy, X-Content-Type-Options. Please enable two-factor authentication on your account for extra safety.</div>
-      </div>
+    <!-- HERO SECTION -->
+    <section class="bg-blue-700 text-white py-20 text-center">
+        <h2 class="text-4xl font-extrabold">Workforce Optimization for Every Industry</h2>
+        <p class="mt-4 text-xl max-w-3xl mx-auto">
+            Actionable analytics to reduce burnout, improve staffing workflows, and increase organizational efficiency — 
+            whether you're a healthcare facility, police department, warehouse, retail environment, or any business that manages employees.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="max-w-6xl mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center mb-10">Our Services</h3>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white shadow-md rounded-xl p-6">
+                <h4 class="text-xl font-semibold mb-3">Real-Time Staffing Analytics</h4>
+                <p>
+                    Identify gaps, inefficiencies, and optimization opportunities with clear, automated dashboards tailored for ANY workforce environment.
+                </p>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl p-6">
+                <h4 class="text-xl font-semibold mb-3">Workflow Optimization</h4>
+                <p>
+                    Improve scheduling, reduce downtime, and streamline processes — from frontline operations to administrative departments.
+                </p>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl p-6">
+                <h4 class="text-xl font-semibold mb-3">Burnout & Efficiency Insights</h4>
+                <p>
+                    Monitor staffing pressure, identify trends, and predict workload spikes before they happen.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="bg-gray-200 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-6">Pricing</h3>
+            <p class="text-center max-w-3xl mx-auto text-lg">
+                Pricing is based on company size, number of employees, data complexity, and reporting frequency.
+                We provide custom quotes to ensure you only pay for what you need.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECURITY SECTION -->
+    <section id="security" class="max-w-6xl mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center mb-8">Security & Data Protection</h3>
+        <div class="bg-white shadow-md rounded-xl p-6 text-lg leading-relaxed">
+            <p>
+                StaffSmart Analytics follows strict security standards. We do NOT collect, request, or store any 
+                **personal identifying information (PII)**, protected employee data, or sensitive HR-related records.
+                All submissions are limited strictly to general business inquiries.
+            </p>
+            <p class="mt-4">
+                Your data is protected with encrypted transmission, secure form handling, and minimized exposure. 
+                We prioritize privacy and legal compliance at every step.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-blue-50 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+
+            <h3 class="text-3xl font-bold text-center mb-8">Contact Us</h3>
+
+            <p class="text-center mb-6 text-lg">
+                Have questions or want a custom quote? Send us a message.
+            </p>
+
+            <!-- CONTACT FORM with Formspree -->
+            <form action="https://formspree.io/f/xvgeqdyv" method="POST"
+                  class="space-y-4 bg-white p-8 rounded-xl shadow-md">
+
+                <div>
+                    <label class="block font-medium">Name</label>
+                    <input type="text" name="name" required
+                        class="w-full mt-1 p-3 border rounded-md focus:ring-blue-500 focus:ring-2">
+                </div>
+
+                <div>
+                    <label class="block font-medium">Email</label>
+                    <input type="email" name="email" required
+                        class="w-full mt-1 p-3 border rounded-md focus:ring-blue-500 focus:ring-2">
+                </div>
+
+                <div>
+                    <label class="block font-medium">Message</label>
+                    <textarea name="message" rows="4" required
+                        class="w-full mt-1 p-3 border rounded-md focus:ring-blue-500 focus:ring-2"></textarea>
+                </div>
+
+                <!-- Redirect to thank you page -->
+                <input type="hidden" name="_next" value="https://staffsmartanalytics.com/thank-you.html">
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition">
+                    Send Message
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-6 text-center">
+        <p class="text-lg">© 2025 StaffSmart Analytics. All Rights Reserved.</p>
+        <p class="text-sm opacity-70">We do not accept or store any PII or sensitive employee information.</p>
     </footer>
-  </div>
-
-  <script>
-    // Small script to enhance accessibility / set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Basic client-side validation reminder (optional)
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      // ensure checkbox checked (HTML required also enforces)
-      var cb = document.querySelector('input[name="no_pii_confirm"]');
-      if(!cb || !cb.checked){
-        e.preventDefault();
-        alert('Please confirm you will not submit PII.');
-      }
-    });
-  </script>
 </body>
 </html>
