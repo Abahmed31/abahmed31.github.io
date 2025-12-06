@@ -1,109 +1,16 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Thank You — StaffSmart Analytics</title>
-  <meta name="description" content="Thank you for contacting StaffSmart Analytics." />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-</head>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Thank you — Staff Smart Analytics</title><link rel="stylesheet" href="styles.css"/><script defer src="script.js"></script></head><body>
+<header class="site-header"><div class="header-inner"><div class="brand"><img src="logo.png" class="brand-logo" alt="logo"/><div class="brand-title"><div class="brand-name">StaffSmart</div><div class="brand-tag">Analytics</div></div></div><nav class="primary-nav"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html" class="nav-cta">Contact</a></nav><button id="navToggle" class="nav-toggle"><span class="hamburger"></span></button></div><div id="mobileNav" class="mobile-nav" aria-hidden="true" style="display:none"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html">Contact</a></div></header>
 
-<body class="page-root">
+<main style="padding-top:110px;text-align:center">
+  <section class="container">
+    <img src="logo.png" alt="Staff Smart Analytics logo" style="width:84px;margin:12px auto 18px;display:block" />
+    <h1>Thank you</h1>
+    <p class="muted">Your inquiry has been received. A member of our team will reach out within 1–2 business days.</p>
+    <div style="margin-top:18px"><a href="index.html" class="btn btn-primary">Return to home</a></div>
+  </section>
+</main>
 
-  <!-- NAV -->
-  <header class="site-header" role="banner" aria-label="Main navigation">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="logo.png" alt="StaffSmart Analytics" class="brand-logo" />
-        <div class="brand-title">
-          <span class="brand-name">StaffSmart</span>
-          <span class="brand-tag">Analytics</span>
-        </div>
-      </div>
-
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="index.html#why" class="nav-link">Why Us</a>
-        <a href="services.html" class="nav-link">Solutions</a>
-        <a href="pricing.html" class="nav-link">Pricing</a>
-        <a href="security.html" class="nav-link">Data Safety</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
-      </nav>
-
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-
-    <!-- Mobile nav -->
-    <div id="mobileNav" class="mobile-nav" aria-hidden="true">
-      <a href="index.html">Home</a>
-      <a href="index.html#why">Why Us</a>
-      <a href="services.html">Solutions</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="security.html">Data Safety</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </header>
-
-  <!-- MAIN -->
-  <main class="fade-up">
-
-    <section class="hero" style="padding-top:70px;padding-bottom:60px;text-align:center;">
-      <div class="container narrow">
-
-        <img src="logo.png" alt="StaffSmart Logo" class="thank-you-logo" style="width:80px;margin-bottom:20px;opacity:0.9;" />
-
-        <h1 class="hero-title">Thank You</h1>
-
-        <p class="hero-lead" style="max-width:620px;margin:auto;margin-top:12px;">
-          Your inquiry has been successfully submitted.  
-          A member of our team will review your request and reach out within <strong>1–2 business days</strong>.
-        </p>
-
-        <p class="muted small" style="margin-top:10px;">
-          If you need immediate assistance, feel free to email us at  
-          <a href="mailto:info@staffsmartanalytics.com">info@staffsmartanalytics.com</a>.
-        </p>
-
-        <div style="margin-top:30px;">
-          <a href="index.html" class="btn btn-primary">Return to Home</a>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand-compact">
-        <img src="logo.png" alt="StaffSmart Analytics logo" class="footer-logo" />
-        <div class="brand-meta">
-          <div class="brand-name">StaffSmart Analytics</div>
-          <div class="brand-sub muted">Workforce optimization & forecasting</div>
-        </div>
-      </div>
-
-      <div class="footer-right">
-        <div class="links">
-          <a href="services.html">Solutions</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="security.html">Data Safety</a>
-          <a href="privacy.html">Privacy</a>
-        </div>
-        <div class="muted small">© <span id="yrTY"></span> StaffSmart Analytics</div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Auto-update year
-    document.getElementById("yrTY").textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
+<footer><div class="footer-inner"><div style="display:flex;align-items:center;gap:12px"><img src="logo.png" class="footer-logo" alt="logo"/><div style="font-weight:700;color:#e5dbff">StaffSmart Analytics</div></div><div style="text-align:right;color:#cfd6e6">© <span id="yrTY2"></span></div></div></footer>
+<script>document.getElementById('yrTY2').textContent=new Date().getFullYear();</script>
+</body></html>
