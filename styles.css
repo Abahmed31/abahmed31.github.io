@@ -188,3 +188,26 @@ label{display:block;font-weight:600;color:var(--navy);margin-bottom:6px}
 
 /* ---------- Accessibility focus styles ---------- */
 a:focus,button:focus,input:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(99,102,241,0.12)}
+/* Dark translucent navbar background */
+.site-header {
+  background: rgba(10, 12, 20, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Ensure nav links are visible */
+.nav-link,
+.nav-cta {
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #00e5ff !important;
+}
+
+/* Mobile menu background updated too */
+.mobile-nav {
+  background: rgba(10, 12, 20, 0.95);
+  backdrop-filter: blur(10px);
+}
