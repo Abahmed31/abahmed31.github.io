@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – StaffSmart Analytics</title>
+  <title>Contact — Staff Smart Analytics</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -11,53 +11,59 @@
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div class="navbar-left">
-    <img src="logo-new.png" alt="Smart Staff Analytics" style="height:40px;">
-    <div style="color:white; font-size:14px; margin-left:8px;">Analytics</div>
-  </div>
+    <div class="navbar-left">
+        <img src="logo-new.png" alt="Logo" style="height:44px;">
+        <a href="index.html" class="nav-links">Home</a>
+        <a href="about.html" class="nav-links">Why Us</a>
+        <a href="services.html" class="nav-links">Solutions</a>
+        <a href="pricing.html" class="nav-links">Pricing</a>
+        <a href="security.html" class="nav-links">Data Safety</a>
+    </div>
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="why.html">Why Us</a>
-    <a href="services.html">Solutions</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="security.html">Data Safety</a>
-  </div>
-
-  <a class="contact-btn" href="contact.html">Contact</a>
+    <a class="contact-btn" href="contact.html">Contact</a>
 </div>
 
 <section>
-  <h1>Contact Us</h1>
-  <p>Send us a message and we’ll get back to you shortly.</p>
+    <h1>Contact & Request a Free Analysis</h1>
+    <p style="max-width:600px;margin-top:10px;color:#555;">
+        Fill the secure form below — do not include employee names, SSNs, DOB, or medical data.
+    </p>
 
-  <form action="thank-you.html" method="POST">
+    <form action="https://formspree.io/f/xvgeqdyv" method="POST">
 
-    <label>Name</label>
-    <input type="text" name="name" required>
+        <label>Organization</label>
+        <input type="text" name="company" required placeholder="Your organization">
 
-    <br><br>
+        <label>Contact Name</label>
+        <input type="text" name="contactname" required placeholder="Full name">
 
-    <label>Email</label>
-    <input type="email" name="email" required>
+        <label>Business Email</label>
+        <input type="email" name="email" required placeholder="you@company.com">
 
-    <br><br>
+        <label>Phone (optional)</label>
+        <input type="tel" name="phone" placeholder="(555) 555-5555">
 
-    <label>Brief description</label>
-    <textarea name="description" placeholder="Shift schedules, staff counts, reporting needs..." required></textarea>
+        <label>Description</label>
+        <textarea name="message" placeholder="Shift schedules, staff counts, reporting needs..."></textarea>
 
-    <!-- FIXED CHECKBOX ROW -->
-    <div class="checkbox-row">
-      <input type="checkbox" name="confirm" required>
-      <label>I confirm I will not submit PII (names, SSNs, DOB, medical data).</label>
-    </div>
+        <!-- FIXED CHECKBOX SECTION -->
+        <div class="checkbox-row">
+            <input type="checkbox" id="piiCheck" required>
+            <label for="piiCheck">
+                I confirm I will NOT submit any employee PII (names, SSNs, DOB, medical info).
+            </label>
+        </div>
 
-    <br><br>
-
-    <button class="contact-btn" type="submit">Submit inquiry</button>
-
-  </form>
+        <button class="contact-btn" style="margin-top:20px;">Submit</button>
+    </form>
 </section>
 
+<footer style="margin-top:40px;padding:20px;text-align:center;color:#555;">
+    © <span id="year"></span> Staff Smart Analytics
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
