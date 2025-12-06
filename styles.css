@@ -34,24 +34,17 @@ body {
   gap: 30px;
 }
 
-/* NAVBAR LINK COLORS — ALWAYS CYAN + PURPLE OUTLINE */
+/* FIXED NAVBAR TEXT COLOR */
 .nav-links a {
-  color: #7dfcff !important;        /* cyan (same as hover before) */
+  color: white !important;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-
-  padding: 6px 12px;
-  border: 2px solid #9d4bff;        /* same purple as your buttons */
-  border-radius: 8px;
 }
 
 .nav-links a:hover {
-  background: rgba(157, 75, 255, 0.2);  /* subtle purple hover glow */
-  color: #7dfcff !important;
-  border-color: #9d4bff;
+  color: #9d7dff !important;
 }
-
 
 .contact-btn {
   background: #9d4bff;
