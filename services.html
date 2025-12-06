@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — StaffSmart Analytics</title>
+  <meta name="description" content="Services offered by StaffSmart Analytics: overtime optimization, burnout prevention, forecasting, dashboards, integrations, and implementation support." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formspree.io; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-root">
+
+  <!-- header (shared layout) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="StaffSmart Analytics" class="brand-logo" />
+        <div class="brand-title">
+          <span class="brand-name">StaffSmart</span>
+          <span class="brand-tag">Analytics</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#why" class="nav-link">Why Us</a>
+        <a href="services.html" class="nav-link nav-active">Solutions</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="security.html" class="nav-link">Data Safety</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="index.html#why">Why Us</a>
+      <a href="services.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Data Safety</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="fade-up">
+
+    <!-- Page hero for Services -->
+    <section class="hero" style="padding-top:36px;padding-bottom:18px;">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">Comprehensive, industry-agnostic solutions</span>
+          <h1 class="hero-title">Solutions that reduce labor cost, improve staffing predictability, and safeguard staff wellbeing</h1>
+          <p class="hero-lead">Our services are designed for operational leaders who need measurable results. Each engagement includes prioritized actions, estimated savings, and owner recommendations so you can move from insight to impact quickly.</p>
+
+          <div class="hero-ctas">
+            <a href="contact.html" class="btn btn-primary">Request a pilot</a>
+            <a href="pricing.html" class="btn btn-outline">How pricing works</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="card visual-card">
+            <div class="card-head">
+              <div>
+                <div class="small-muted">Sample deliverable</div>
+                <div class="card-title">Concise prioritized action plan</div>
+              </div>
+              <div class="time-tag">Pilot — 1 week</div>
+            </div>
+
+            <div class="chart-visual">
+              <svg viewBox="0 0 320 160" class="svg-chart"><rect width="320" height="160" rx="12" fill="#f6f8ff"/><path d="M24 120 L68 80 L112 100 L156 70 L200 90 L256 50" fill="none" stroke="url(#gradA)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+
+            <ul class="card-list">
+              <li>Executive summary & KPI impact</li>
+              <li>Top 5 prioritized operational fixes</li>
+              <li>Estimated monthly savings and implementation difficulty</li>
+            </ul>
+
+            <div class="card-actions">
+              <a href="contact.html" class="btn btn-primary">Start a pilot</a>
+              <a href="index.html" class="btn btn-ghost">Back to home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" class="panel">
+      <div class="container">
+        <div class="intro">
+          <h2>Why StaffSmart</h2>
+          <p class="muted">We combine operations research, practical scheduling experience, and modern forecasting to provide actionable recommendations that leaders can implement immediately. Our focus is on operational fixes — not vanity metrics.</p>
+        </div>
+
+        <div class="cards-grid" style="margin-top:20px;">
+          <article class="feature">
+            <h3>Measurable impact</h3>
+            <p class="muted">Every recommendation is accompanied by estimated dollars saved, impact on overtime, and implementation difficulty so you know exactly where to allocate effort.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Fast pilots</h3>
+            <p class="muted">In most cases we run a light pilot analyzing a representative sample and deliver a one-page action plan in under 10 business days.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Industry-agnostic</h3>
+            <p class="muted">We apply the same principles across healthcare, retail, logistics, public safety, manufacturing, and corporate operations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED SOLUTIONS -->
+    <section class="container" style="padding-top:32px;padding-bottom:32px;">
+      <h2 style="margin-bottom:14px;color:var(--navy)">Our Solutions — detailed</h2>
+
+      <!-- Overtime Optimization -->
+      <article class="feature card-lg" style="margin-bottom:16px;padding:20px;">
+        <h3>Overtime Optimization</h3>
+        <p class="muted">We locate overtime drivers by analyzing historical rosters, payroll, and policy rules. Our method isolates repeated causes (e.g., shift rounding, minimum-call rules, understaffed windows) and prescribes targeted operational changes.</p>
+
+        <h4 style="margin-top:12px">Included activities</h4>
+        <ul class="muted">
+          <li>Root-cause analysis of overtime events</li>
+          <li>Rule-based detection (policy + scheduling engine checks)</li>
+          <li>Prioritized action list: schedule rules, capacity changes, and role adjustments</li>
+        </ul>
+
+        <h4 style="margin-top:12px">Deliverables</h4>
+        <ul class="muted">
+          <li>One-page prioritized action plan</li>
+          <li>Estimated monthly OT savings with confidence ranges</li>
+          <li>Implementation difficulty & owner assignment</li>
+        </ul>
+      </article>
+
+      <!-- Burnout & Risk Detection -->
+      <article class="feature card-lg" style="margin-bottom:16px;padding:20px;">
+        <h3>Burnout & Risk Detection</h3>
+        <p class="muted">We evaluate shift patterns, consecutive work windows, and high-intensity assignments to surface teams and individuals at elevated risk for fatigue-related issues.</p>
+
+        <h4 style="margin-top:12px">Core analytics</h4>
+        <ul class="muted">
+          <li>Consecutive shifts and short-rest interval analysis</li>
+          <li>Distribution of weekend/holiday duty and on-call load</li>
+          <li>Floating/double-up frequency and clustering</li>
+        </ul>
+
+        <h4 style="margin-top:12px">Outcomes</h4>
+        <ul class="muted">
+          <li>Risk heatmaps and prioritized mitigation actions</li>
+          <li>Estimated impact on turnover/absenteeism (directional)</li>
+          <li>Policy suggestions to restore recovery windows</li>
+        </ul>
+      </article>
+
+      <!-- Forecasting -->
+      <article class="feature card-lg" style="margin-bottom:16px;padding:20px;">
+        <h3>Predictive Forecasting (30 / 90 / 180 days)</h3>
+        <p class="muted">We provide three forecast horizons: short-term (30 days), tactical (90 days), and strategic (180 days). Models combine historical seasonal patterns, local events, and trend analysis.</p>
+
+        <h4 style="margin-top:12px">Forecast types & purpose</h4>
+        <ul class="muted">
+          <li><strong>30-day:</strong> minimize reactive OT and agency use — supports scheduling decisions.</li>
+          <li><strong>90-day:</strong> hiring & training planning, predictable peak windows, and leave management.</li>
+          <li><strong>180-day:</strong> budgeting, headcount planning, and strategic workforce initiatives.</li>
+        </ul>
+
+        <h4 style="margin-top:12px">Forecast outputs</h4>
+        <ul class="muted">
+          <li>Daily/weekly demand curves with confidence bands</li>
+          <li>Suggested staffing targets & recommended buffers</li>
+          <li>Scenario simulations showing projected OT & agency costs</li>
+        </ul>
+      </article>
+
+      <!-- Cost-Efficiency Modeling -->
+      <article class="feature card-lg" style="margin-bottom:16px;padding:20px;">
+        <h3>Cost-Efficiency Modeling</h3>
+        <p class="muted">We quantify the financial impact of scheduling decisions and proposed fixes — including OT, agency, and vacancy costs — and compare the ROI of options (hire vs. reschedule vs. use of flexible pools).</p>
+
+        <h4 style="margin-top:12px">What's included</h4>
+        <ul class="muted">
+          <li>Detailed cost model for labor categories</li>
+          <li>Scenario comparison with ROI calculation</li>
+          <li>Break-even timelines for staffing changes</li>
+        </ul>
+      </article>
+
+      <!-- Dashboards & Integrations -->
+      <article class="feature card-lg" style="margin-bottom:16px;padding:20px;">
+        <h3>Dashboards & Integrations</h3>
+        <p class="muted">Custom dashboards for executives, operations, and schedulers — with automated reports on your cadence. Data ingestion supports CSV and common payroll/scheduling APIs where available.</p>
+
+        <h4 style="margin-top:12px">Capabilities</h4>
+        <ul class="muted">
+          <li>Executive-level KPIs & drill-down reports</li>
+          <li>Scheduler-facing daily sheets and exception lists</li>
+          <li>Automated email or dashboard deliveries (daily/weekly/monthly)</li>
+        </ul>
+      </article>
+
+      <!-- Implementation & Training -->
+      <article class="feature card-lg" style="margin-bottom:8px;padding:20px;">
+        <h3>Implementation & Training</h3>
+        <p class="muted">We help operationalize recommendations — change management, scheduler training, and monitoring to ensure sustained improvements.</p>
+
+        <h4 style="margin-top:12px">Support options</h4>
+        <ul class="muted">
+          <li>Implementation playbook and roll-out plan</li>
+          <li>Scheduler training sessions (remote or on-site)</li>
+          <li>Ongoing monitoring and quarterly check-ins</li>
+        </ul>
+      </article>
+
+      <div class="cta-block" style="margin-top:18px">
+        <p class="muted small">Interested in a tailored demonstration or sample report? Request a pilot — we'll scope a short engagement and demonstrate expected savings.</p>
+        <div>
+          <a href="contact.html" class="btn btn-primary">Request a pilot</a>
+          <a href="pricing.html" class="btn btn-outline" style="margin-left:10px">Discuss pricing</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (shared) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-compact">
+        <img src="logo.png" alt="StaffSmart Analytics" class="footer-logo" />
+        <div class="brand-meta">
+          <div class="brand-name">StaffSmart Analytics</div>
+          <div class="brand-sub muted">Workforce optimization & forecasting</div>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a href="security.html">Data Safety</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <div class="copyright muted">© <span id="yrServices"></span> StaffSmart Analytics</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
