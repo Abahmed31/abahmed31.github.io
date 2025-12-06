@@ -1,114 +1,233 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Staff Smart Analytics — Workforce optimization & staffing insights</title>
+  <meta name="description" content="Staff Smart Analytics: data-driven staffing optimization for any industry. Reduce overtime, prevent burnout, and improve scheduling predictability." />
+
+  <!-- Basic security + privacy meta (browser-respected) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formspree.io; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="robots" content="index,follow">
+
+  <!-- Styles: clean, responsive -->
+  <style>
+    :root{
+      --navy:#0b2545;
+      --teal:#0fa3a3;
+      --muted:#6b7280;
+      --bg:#f6f9fb;
+      --card:#ffffff;
+      --maxw:1080px;
+      --radius:12px;
+      --shadow:0 6px 18px rgba(11,37,69,0.08);
+      --accent:#0b2545;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:#0b2545;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:52px;width:auto;display:block}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{font-weight:600;color:var(--navy);font-size:15px}
+
+    /* Hero */
+    .hero{display:flex;flex-direction:column;gap:18px;padding:36px;border-radius:14px;background:linear-gradient(180deg,#23395d 0%,#12314b 100%);color:white;margin:14px 0}
+    .hero h1{margin:0;font-size:28px;line-height:1.06}
+    .hero p{margin:0;color:rgba(255,255,255,0.9)}
+
+    .cta-row{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--teal);color:white}
+    .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.12);color:white}
+
+    /* Sections */
+    .section{padding:36px 0}
+    h2{color:var(--navy);font-size:24px;margin:0 0 12px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:14px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+
+    /* Contact form */
+    .contact-wrap{max-width:760px;margin:auto}
+    .contact-form input,.contact-form textarea, .contact-form select {
+      width:100%;padding:12px;border-radius:8px;border:1px solid #dfe7ee;font-size:15px;margin-top:8px;
+      background: #fff;
+    }
+    .contact-form label{font-weight:600;font-size:14px;color:var(--navy)}
+    .contact-form small{display:block;color:var(--muted);margin-top:6px}
+
+    /* Footer */
+    footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      nav{display:none} /* simple collapse: small screens will see nav below */
+      header{padding-bottom:8px}
+    }
+    @media (max-width:480px){
+      .hero{padding:24px}
+      .hero h1{font-size:22px}
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Smart Staff Analytics — AI Staffing Analysis for Care Facilities&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Reduce overtime costs and prevent staff burnout with AI-assisted staffing analysis for nursing homes and assisted living facilities. Book a free analysis." /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--navy:#0b2545;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--teal:#0fa3a3;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted:#6b7280;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card:#ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg:#f6f9fb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--maxw:1100px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius:12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--shadow: 0 6px 18px rgba(11,37,69,0.08);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body{margin:0;background:var(--bg);color:#0b2545;-webkit-font-smoothing:antialiased}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container{max-width:var(--maxw);margin:0 auto;padding:28px}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav a{margin-left:18px;text-decoration:none;color:var(--navy);font-weight:600}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:28px 0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.eyebrow{display:inline-block;padding:6px 10px;background:#e6f6f6;color:var(--teal);border-radius:999px;font-weight:700;font-size:13px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{font-size:30px;margin:14px 0 8px;line-height:1.06}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>p.lead{color:var(--muted);margin:0 0 18px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta-row{display:flex;gap:12px;align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary{background:var(--navy);color:white}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-outline{background:transparent;border:2px solid rgba(11,37,69,0.08);color:var(--navy)}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer{margin:36px 0 80px;color:var(--muted);font-size:14px;text-align:center}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="A_logo_for_a_company_named_Smart_Staff_Analytics_i.png" alt="Smart Staff Analytics Logo" style="height:60px;width:auto;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#services"&gt;Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#how"&gt;How it works&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="eyebrow"&gt;Reduce overtime • Prevent burnout&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Cut overtime costs &amp; prevent staff burnout with AI-driven staffing analysis&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="lead"&gt;We analyze schedules, identify hidden overtime drivers, and deliver clear, prioritized recommendations so your facility runs more predictably and affordably.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn btn-primary" href="#contact"&gt;Book Free Staffing Analysis&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn btn-outline" href="#contact"&gt;Contact Us&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;aside&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4 style="margin-top:0"&gt;Book Your Free Analysis&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Send your message and we’ll get back to you.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/aside&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="services"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Services &amp; Benefits&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;AI-Assisted Overtime Analysis&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Burnout Risk Detection&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Coverage Forecasting &amp; Planning&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Clear, actionable recommendations&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Contact&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Email: &lt;a href="mailto:info@smartstaffanalytics.com"&gt;info@smartstaffanalytics.com&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>© &lt;span id="year"&gt;&lt;/span&gt; Smart Staff Analytics — All Rights Reserved</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("year").textContent = new Date().getFullYear();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="container">
+    <!-- Header / Navigation -->
+    <header>
+      <div class="brand">
+        <!-- Use the same logo file you uploaded; replace filename if needed -->
+        <img src="A_logo_for_a_company_named_Smart_Staff_Analytics_i.png" alt="Staff Smart Analytics logo" />
+        <div style="font-weight:800">Staff Smart Analytics</div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#data-safety">Data Safety</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section id="home" class="hero" role="region" aria-label="Introduction">
+        <h1>Optimize staffing, reduce overtime, and protect your team — across any industry.</h1>
+        <p>Data-driven staffing analysis tailored for hospitals, retail, public safety, manufacturing, and more. Actionable recommendations, clear ROI estimates, and no PII required.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Find out more</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="card">
+          <h2 id="about-heading">About Staff Smart Analytics</h2>
+          <p>We provide AI-assisted workforce analysis and scheduling optimization that make staffing predictable and cost-effective. Our analyses identify overtime drivers, staffing gaps, and burnout risks — and produce prioritized, practical steps to address them.</p>
+          <p><strong>Industries we serve:</strong> healthcare, retail, logistics, public safety, education, hospitality, manufacturing, and corporate operations.</p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section" aria-labelledby="services-heading">
+        <h2 id="services-heading">Services</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>AI-Assisted Staffing Analysis</h3>
+            <p>Automated analysis of schedules to reveal hidden overtime drivers, shift imbalances, and high-risk patterns.</p>
+          </div>
+          <div class="card">
+            <h3>Forecasting & Coverage Planning</h3>
+            <p>Short- and long-term forecasting to reduce agency cost and ensure coverage without overstaffing.</p>
+          </div>
+          <div class="card">
+            <h3>Custom Dashboards & Reporting</h3>
+            <p>Interactive visuals and prioritized recommendations, delivered on your schedule (weekly / monthly / quarterly).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="section" aria-labelledby="pricing-heading">
+        <h2 id="pricing-heading">Pricing</h2>
+        <div class="card">
+          <p>Pricing depends on organization size, number of employees analyzed, and reporting frequency. We offer flexible plans — from single-report pilots to enterprise recurring engagements. Provide a few details below and we’ll send a tailored estimate.</p>
+        </div>
+      </section>
+
+      <!-- DATA SAFETY -->
+      <section id="data-safety" class="section" aria-labelledby="data-heading">
+        <h2 id="data-heading">Data Safety & Privacy</h2>
+        <div class="card">
+          <p><strong>We do NOT accept or process PII.</strong> You must anonymize any staff or roster data before sending. Our analysis uses aggregated staffing metrics and anonymized inputs only. We never request or store names, social security numbers, health records, or other personal identifiers.</p>
+          <p>We recommend removing or hashing any employee identifiers prior to upload. By using our service you confirm you will not provide personal data that is protected or regulated.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact & Request a Quote</h2>
+
+        <div class="card contact-wrap">
+          <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/your-form-id">
+            <!-- IMPORTANT: replace the action URL above with your Formspree form URL (Formspree gives an endpoint like https://formspree.io/f/abcxyz) -->
+            <!-- Hidden Formspree field: redirect to thank-you page after submit -->
+            <input type="hidden" name="_next" value="https://staffsmartanalytics.com/thank-you.html">
+            <input type="hidden" name="_subject" value="New inquiry from staffsmartanalytics.com">
+            <label for="company">Organization name</label>
+            <input id="company" name="company" type="text" placeholder="Acme Corp / Station 14" required>
+
+            <label for="contactname">Contact name</label>
+            <input id="contactname" name="contactname" type="text" placeholder="Your full name" required>
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="your@company.com" required>
+
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555">
+
+            <label for="message">Brief description of your needs</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you'd like assessed (shift schedules, number of staff, frequency)"></textarea>
+
+            <label style="display:block;margin-top:6px">
+              <input type="checkbox" name="no_pii_confirm" required>
+              I confirm I will not send any PII (names, SSNs, health records). I understand analyses use anonymized staffing data only.
+            </label>
+
+            <small>By submitting this form you consent to receive follow-up from Staff Smart Analytics. We will not sell your information. For privacy concerns, email: info@staffsmartanalytics.com</small>
+
+            <div style="margin-top:14px">
+              <button type="submit" class="btn btn-primary">Submit inquiry</button>
+              <a class="btn" style="margin-left:8px;background:transparent;border:1px solid #dfe7ee;border-radius:8px;padding:10px 14px;color:var(--navy)" href="mailto:info@staffsmartanalytics.com">Email us</a>
+            </div>
+
+            <noscript>
+              <p style="color:#b33">JavaScript is disabled — the form will still post but you may not see immediate feedback. You will be redirected after submission.</p>
+            </noscript>
+          </form>
+
+          <p style="margin-top:12px;color:var(--muted)">Note: Pricing depends on size and frequency. We will provide a tailored estimate after a short consultation.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div style="max-width:var(--maxw);margin:0 auto;padding:8px">
+        <div style="margin-bottom:8px">© <span id="year"></span> Staff Smart Analytics</div>
+        <div style="font-size:13px;color:var(--muted)">Security measures applied: content security policy, referrer policy, X-Content-Type-Options. Please enable two-factor authentication on your account for extra safety.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Small script to enhance accessibility / set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Basic client-side validation reminder (optional)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      // ensure checkbox checked (HTML required also enforces)
+      var cb = document.querySelector('input[name="no_pii_confirm"]');
+      if(!cb || !cb.checked){
+        e.preventDefault();
+        alert('Please confirm you will not submit PII.');
+      }
+    });
+  </script>
 </body>
 </html>
