@@ -1,91 +1,183 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Staff Smart Analytics — Workforce Optimization</title>
-  <meta name="description" content="Data-driven staffing analytics, forecasting, and workforce optimization solutions." />
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>StaffSmart Analytics — Workforce Optimization</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<body>
 
-<header class="navbar" role="banner">
-  <div class="navbar-inner">
-    <div class="brand-left">
-      <div class="brand-left">
-        <img src="logo-new.png" alt="StaffSmart logo" class="brand-logo" />
-        <div class="brand-title"><div class="brand-name">StaffSmart</div><div class="brand-tag muted">Analytics</div></div>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="logo-new.png" class="brand-logo" alt="StaffSmart Analytics logo"/>
+      <div>
+        <div class="brand-name">StaffSmart</div>
+        <div class="brand-tag">Analytics</div>
       </div>
     </div>
 
-    <nav class="nav-links" role="navigation" aria-label="Main navigation">
-      <a href="index.html" class="active">Home</a>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
       <a href="about.html">Why Us</a>
       <a href="services.html">Solutions</a>
       <a href="pricing.html">Pricing</a>
       <a href="security.html">Data Safety</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
-
-    <div style="display:flex;align-items:center;gap:10px">
-      <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">
-        <span class="icon" aria-hidden="true"></span>
-      </button>
-
-      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
-    </div>
   </div>
 </header>
 
-<div id="mobileNav" class="mobile-nav" aria-hidden="true" style="display:none">
-  <a href="index.html">Home</a>
-  <a href="about.html">Why Us</a>
-  <a href="services.html">Solutions</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="security.html">Data Safety</a>
-  <a href="contact.html">Contact</a>
-</div>
-
 <main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Workforce Optimization</span>
-        <h1 class="hero-title">Smarter staffing decisions start with better data</h1>
-        <p class="hero-lead">We transform scheduling and shift information into prioritized actions that reduce overtime, prevent burnout, and improve predictability.</p>
-        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="contact.html" class="btn btn-primary nav-cta">Request free analysis</a>
-          <a href="services.html" class="btn btn-outline" style="border-color:var(--accent-purple);color:var(--accent-cyan)">View solutions</a>
-        </div>
-      </div>
-      <div>
-        <img src="logo-new.png" alt="StaffSmart visual" class="hero-logo" />
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Workforce Optimization</span>
+      <h1>
+        Smarter staffing decisions<br/>
+        start with better data
+      </h1>
+      <p class="hero-subtext">
+        StaffSmart Analytics helps organizations optimize staffing levels,
+        reduce overtime, and improve predictability using clear, actionable
+        workforce insights — without collecting PII.
+      </p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">
+          Request free analysis
+        </a>
+        <a href="services.html" class="btn-link">
+          View solutions →
+        </a>
       </div>
     </div>
-  </section>
 
-  <section class="panel">
-    <div class="container">
-      <h2>What we deliver</h2>
-      <div class="cards-grid">
-        <div class="card"><h3>Forecasting</h3><p class="muted">30/90/180-day workload forecasts to inform resource planning.</p></div>
-        <div class="card"><h3>Overtime Reduction</h3><p class="muted">Identify preventable overtime and prioritized fixes.</p></div>
-        <div class="card"><h3>Burnout Prevention</h3><p class="muted">Identify risky schedules and workload imbalances before they impact staff well-being.</p></div>
+    <div class="hero-visual">
+      <img src="logo-new.png" alt="Workforce analytics visualization">
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUE PROPS ================= -->
+<section class="container">
+  <div class="value-grid">
+    <div class="value-card">
+      <h3>Workforce optimization</h3>
+      <p>
+        Identify understaffing, overstaffing, and demand mismatches to ensure
+        the right people are scheduled at the right time.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <h3>Overtime reduction</h3>
+      <p>
+        Detect patterns that drive unnecessary overtime and labor cost
+        escalation before they become systemic.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <h3>Operational clarity</h3>
+      <p>
+        Turn schedules and shift data into prioritized insights leadership
+        can act on immediately.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="light-section">
+  <div class="container">
+    <h2>How StaffSmart works</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h4>Analyze scheduling data</h4>
+        <p>
+          We evaluate shift structures, staffing levels, and coverage patterns
+          using anonymized operational data.
+        </p>
       </div>
 
-      <div class="cta-block" style="margin-top:20px"><p class="muted">Custom reporting packages based on size and frequency. Request a tailored quote.</p><a class="btn btn-primary nav-cta" href="contact.html">Get started</a></div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h4>Surface optimization opportunities</h4>
+        <p>
+          Our analysis highlights inefficiencies, risk areas, and improvement
+          opportunities across teams and time periods.
+        </p>
+      </div>
+
+      <div class="step">
+        <span class="step-num">3</span>
+        <h4>Deliver actionable recommendations</h4>
+        <p>
+          You receive clear, practical insights — not dashboards — so you can
+          make confident workforce decisions.
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="container">
+  <h2>Security-first by design</h2>
+  <div class="trust-grid">
+    <div>
+      <strong>No PII collected</strong>
+      <p class="muted">
+        We do not accept names, SSNs, medical records, or sensitive identifiers.
+      </p>
+    </div>
+    <div>
+      <strong>Encrypted transfers</strong>
+      <p class="muted">
+        All data and submissions are transmitted securely via HTTPS/TLS.
+      </p>
+    </div>
+    <div>
+      <strong>Minimal retention</strong>
+      <p class="muted">
+        Only required business data is retained, and deletion is available upon request.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="cta-box">
+    <h2>Start optimizing your workforce</h2>
+    <p>
+      Get a no-obligation analysis tailored to your organization’s staffing needs.
+    </p>
+    <a href="contact.html" class="btn-primary">
+      Request your free analysis
+    </a>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="footer-inner">
-    <div style="display:flex;align-items:center;gap:12px"><img src="logo-new.png" class="footer-logo" alt="logo"/><div style="font-weight:700;color:var(--accent-purple)">StaffSmart Analytics</div></div>
-    <div style="color:var(--muted)">© <span id="yrHome"></span></div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="logo-new.png" class="footer-logo" alt="logo"/>
+      <div style="font-weight:700;">StaffSmart Analytics</div>
+    </div>
+    <div>© <span id="yr"></span></div>
   </div>
 </footer>
 
-<script>document.getElementById('yrHome').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
