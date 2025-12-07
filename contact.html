@@ -1,90 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Contact — StaffSmart Analytics</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <script defer src="script.js"></script>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — StaffSmart Analytics</title>
+  <meta name="description" content="Request a free staffing analysis. Please do not submit PII."/>
+  <link rel="stylesheet" href="styles.css"/><script defer src="script.js"></script>
 </head>
-
 <body>
 <header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <img src="logo-new.png" class="brand-logo" alt="logo"/>
-      <div>
-        <div class="brand-name">StaffSmart</div>
-        <div class="brand-tag">Analytics</div>
-      </div>
-    </div>
-
-    <nav class="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">Why Us</a>
-      <a href="services.html">Solutions</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="security.html">Data Safety</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+  <div class="header-inner"><div class="brand"><img src="logo-new.png" class="brand-logo" alt="logo"/><div class="brand-title"><div class="brand-name">StaffSmart</div><div class="brand-tag">Analytics</div></div></div>
+    <nav class="primary-nav"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html" class="active nav-cta">Contact</a></nav>
+    <button class="nav-toggle">☰</button>
   </div>
+  <div class="mobile-nav" style="display:none"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html">Contact</a></div>
 </header>
 
 <main>
   <section class="container">
     <h1>Contact & Request a Free Analysis</h1>
-    <p class="muted">
-      Fill out the secure form below. Do not submit names, SSNs, medical, or other PII.
-    </p>
+    <p class="muted">Fill the secure form below. Do not submit names, SSNs, medical, or other PII.</p>
 
     <div class="contact-grid">
-      <!-- FORM -->
-      <form action="https://formspree.io/f/YOUR_ID" method="POST">
-        <label>Organization
-          <input type="text" name="organization" required>
-        </label>
+      <form class="form-card" action="https://formspree.io/f/xvgeqdyv" method="POST" autocomplete="on">
+        <input type="hidden" name="_next" value="thank-you.html" />
+        <input type="hidden" name="_subject" value="New inquiry — StaffSmart Analytics" />
 
-        <label>Contact name
-          <input type="text" name="name">
-        </label>
+        <label for="company">Organization</label>
+        <input id="company" name="company" type="text" required />
 
-        <label>Business email
-          <input type="email" name="email" required>
-        </label>
+        <label for="contactname">Contact name</label>
+        <input id="contactname" name="contactname" type="text" required />
 
-        <label>Phone (optional)
-          <input type="tel" name="phone">
-        </label>
+        <label for="email">Business email</label>
+        <input id="email" name="email" type="email" required />
 
-        <label>Brief description
-          <textarea name="message"></textarea>
-        </label>
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" />
+
+        <label for="message">Brief description</label>
+        <textarea id="message" name="message" placeholder="Shift schedules, staff counts, reporting needs..."></textarea>
 
         <div class="checkbox-row">
-          <input type="checkbox" required>
-          <span>I confirm I will not submit PII.</span>
+          <input id="no_pii_confirm" name="no_pii_confirm" type="checkbox" required />
+          <label for="no_pii_confirm">I confirm I will not submit PII (names, SSNs, DOB, medical data).</label>
         </div>
 
         <button class="submit-btn" type="submit">Submit inquiry</button>
       </form>
 
-      <!-- SIDEBAR -->
       <aside class="contact-sidebar">
         <h3>Quick resources</h3>
-        <p class="muted">
-          Request a demo, sample report, or ask integration questions.
-        </p>
-        <p>
-          <strong>Email:</strong><br>
-          <a href="mailto:info@staffsmartanalytics.com">
-            info@staffsmartanalytics.com
-          </a>
-        </p>
+        <p class="muted">Request a demo, sample report, or discuss integrations when you submit the form.</p>
+        <p style="margin-top:12px"><strong>Email:</strong><br><a href="mailto:info@staffsmartanalytics.com">info@staffsmartanalytics.com</a></p>
       </aside>
     </div>
   </section>
 </main>
+
+<footer><div class="footer-inner"><div style="display:flex;align-items:center;gap:12px"><img src="logo-new.png" class="footer-logo" alt="logo"/><div style="font-weight:700">StaffSmart Analytics</div></div><div style="color:#6b7280">© <span id="yrContact2"></span></div></div></footer>
+<script>document.getElementById('yrContact2').textContent=new Date().getFullYear();</script>
 </body>
 </html>
