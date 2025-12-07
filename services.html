@@ -1,31 +1,41 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Solutions — StaffSmart Analytics</title><link rel="stylesheet" href="styles.css"/><script defer src="script.js"></script></head><body>
-<header class="navbar"><div class="navbar-inner"><div class="brand-left"><img src="logo-new.png" class="brand-logo" alt="logo"/><div class="brand-title"><div class="brand-name">StaffSmart</div><div class="brand-tag muted">Analytics</div></div></div>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html" class="active">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html" class="nav-cta">Contact</a></nav>
-  <div style="display:flex;align-items:center;gap:10px"><button id="themeToggle" class="theme-toggle" aria-pressed="false"><span class="icon"></span></button><button id="navToggle" class="nav-toggle" aria-expanded="false"><span class="hamburger"></span></button></div></div></header>
-
-<div id="mobileNav" class="mobile-nav" aria-hidden="true" style="display:none"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html">Contact</a></div>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Solutions — StaffSmart Analytics</title>
+  <meta name="description" content="Detailed services: forecasting, overtime analysis, burnout detection, cost modeling, reporting, and training."/>
+  <link rel="stylesheet" href="styles.css"/><script defer src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand"><img src="logo-new.png" class="brand-logo" alt="logo"/><div class="brand-title"><div class="brand-name">StaffSmart</div><div class="brand-tag">Analytics</div></div></div>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html" class="active">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle">☰</button>
+  </div>
+  <div class="mobile-nav" style="display:none"><a href="index.html">Home</a><a href="about.html">Why Us</a><a href="services.html">Solutions</a><a href="pricing.html">Pricing</a><a href="security.html">Data Safety</a><a href="contact.html">Contact</a></div>
+</header>
 
 <main>
-  <section class="panel" style="padding-top:24px">
-    <div class="container">
-      <h1>Solutions</h1>
-      <p class="muted">Detailed service offerings to reduce overtime, improve coverage, and support staff wellbeing.</p>
+  <section class="container">
+    <h1>Solutions</h1>
+    <p class="muted">Comprehensive services to reduce overtime, improve coverage, and protect staff wellbeing.</p>
 
-      <div class="cards-grid" style="margin-top:18px">
-        <div class="card"><h3>Overtime Analysis</h3><p class="muted">Identify scheduling patterns that generate overtime and provide prioritized fixes.</p></div>
-        <div class="card"><h3>Burnout Risk Detection</h3><p class="muted">Analyze recovery time, consecutive shifts, and workload balance.</p></div>
-        <div class="card"><h3>Forecasting</h3><p class="muted">30 / 90 / 180-day forecasts with confidence ranges and staffing recommendations.</p></div>
-        <div class="card"><h3>Cost Modeling</h3><p class="muted">Scenario comparisons: overtime vs. hiring vs. agency usage to inform decisions.</p></div>
-        <div class="card"><h3>Reporting</h3><p class="muted">Clear one-page action plans, executive summaries, and scheduler-ready exports.</p></div>
-        <div class="card"><h3>Training & Implementation</h3><p class="muted">Playbooks and remote coaching to help your team adopt recommended changes.</p></div>
-      </div>
-
-      <div style="text-align:center;margin-top:20px"><a href="contact.html" class="nav-cta btn btn-primary">Request a pilot</a></div>
+    <div class="value-grid" style="margin-top:20px">
+      <div class="value-card"><h3>Overtime Analysis</h3><p class="muted">Identify scheduling patterns that drive overtime and recommend specific fixes.</p></div>
+      <div class="value-card"><h3>Burnout Risk Detection</h3><p class="muted">Analyze recovery time, consecutive shifts, and workload balance.</p></div>
+      <div class="value-card"><h3>Forecasting</h3><p class="muted">30 / 90 / 180-day forecasts with confidence intervals and staffing guidance.</p></div>
+      <div class="value-card"><h3>Cost Modeling</h3><p class="muted">Compare overtime vs hiring vs agency use to inform strategic decisions.</p></div>
+      <div class="value-card"><h3>Reporting</h3><p class="muted">One-page action plans, executive summaries, and scheduler-ready exports.</p></div>
+      <div class="value-card"><h3>Training & Implementation</h3><p class="muted">Playbooks and remote coaching to help teams implement recommended changes.</p></div>
     </div>
+
+    <div style="text-align:center;margin-top:22px"><a href="contact.html" class="btn-primary">Request a pilot</a></div>
   </section>
 </main>
 
-<footer><div class="footer-inner"><div style="display:flex;align-items:center;gap:12px"><img src="logo-new.png" class="footer-logo" alt="logo"/><div style="font-weight:700;color:var(--accent-purple)">StaffSmart Analytics</div></div><div style="color:var(--muted)">© <span id="yrS"></span></div></div></footer>
-<script>document.getElementById('yrS').textContent=new Date().getFullYear();</script>
-</body></html>
+<footer><div class="footer-inner"><div style="display:flex;align-items:center;gap:12px"><img src="logo-new.png" class="footer-logo" alt="logo"/><div style="font-weight:700">StaffSmart Analytics</div></div><div style="color:#6b7280">© <span id="yrServices"></span></div></div></footer>
+<script>document.getElementById('yrServices').textContent=new Date().getFullYear();</script>
+</body>
+</html>
